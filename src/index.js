@@ -10,8 +10,6 @@ import charactersInfoReducer from "./features/charactersInfo";
 import chooseWeaponReducer from "./features/chooseWeapon";
 import choosePotionsReducer from "./features/choosePotions";
 import inventorySlotsReducer from "./features/inventorySlots";
-import buyPotionsReducer from "./features/buyWeapon";
-import buyWeaponReducer from "./features/buyWeapon";
 import itemToSlotReducer from "./features/itemToSlot";
 import changeMoneyReducer from "./features/changeMoney";
 
@@ -22,11 +20,8 @@ const store = configureStore({
         inventorySlots: inventorySlotsReducer,
         choosePotions: choosePotionsReducer,
         chooseWeapon: chooseWeaponReducer,
-        buyPotions: buyPotionsReducer,
-        buyWeapon: buyWeaponReducer,
         itemToSlot: itemToSlotReducer,
         changeMoney: changeMoneyReducer,
-
     }
 })
 

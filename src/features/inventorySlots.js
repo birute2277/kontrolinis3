@@ -6,18 +6,18 @@ export const inventorySlotsSlice = createSlice({
         value: [],
     },
     reducers: {
-        setInventorySlots: (state, {payload}) => {
-            const slotsNumber = payload
+        setInventorySlots: (state, action) => {
+            const slotsNumber = action.payload
             state.value = []
             for (let i = 0; i < slotsNumber; i++) {
                 state.value.push("")
             }
         },
-            setItemToSlot:(state , action)=>{
-                state.value=action.payload
-            },
+        setItemToSlot: (state, action) => {
+            state.value = [...state.value, action.payload]
+        },
 
-        }
+    }
 
 })
 

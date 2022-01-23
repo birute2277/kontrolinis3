@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 
 const Toolbar = () => {
@@ -9,10 +8,10 @@ const Toolbar = () => {
 
     return (
 
-            <div className="main-toolbar a-center j-center space-around">
-                <div><h1 onClick={() => nav("./trader")}>Shop</h1></div>
-                <div><h1 onClick={() => nav("./arena")}>Arena</h1></div>
-
+            <div className="toolbar a-center j-center space-around">
+                <div><h1 onClick={() => nav("/trader")}>Trader</h1></div>
+                <div><h1 onClick={() => nav("/arena")}>Arena</h1></div>
+                <div><h1 onClick={() => nav("/")}>Start</h1></div>
 
             </div>
 

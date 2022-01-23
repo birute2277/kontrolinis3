@@ -108,7 +108,7 @@ const Characters = () => {
     return (
         <div className="d-flex wrap space-around">
             {characters.map((x, i) =>
-                <button className="start-button" key={i}>
+                <button className="st-button" key={i}>
             <div className="character"
                   onClick={ () => chooseCharacter(x)}
             >

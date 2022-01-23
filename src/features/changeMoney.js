@@ -7,11 +7,11 @@ export const changeMoneySlice = createSlice({
     },
     reducers: {
         setChangeMoney: (state, {payload}) => {
-            const slotsNumber=payload
-            state.value=[]
-            for(let i=0; i<slotsNumber; i++){
-                state.value.push("")
-            }
+            // const slotsNumber=payload
+            // state.value=[]
+            // for(let i=0; i<slotsNumber; i++){
+            //     state.value.push("")
+            // }
 
         }
     }

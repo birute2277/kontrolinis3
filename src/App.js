@@ -127,10 +127,10 @@ import React from "react";
 import {BrowserRouter, Routes, Route, useNavigate} from "react-router-dom";
 
 import StartPage from "./pages/StartPage";
+import ChoosePlayerPage from "./pages/ChoosePlayerPage"
 import MainPage from "./pages/MainPage";
 import TraderPage from "./pages/TraderPage";
 import ArenaPage from "./pages/ArenaPage";
-import HomePage from "./pages/HomePage";
 
 
 function App() {
@@ -142,11 +142,11 @@ function App() {
 
 
                 <Routes>
-                    <Route path="/" element={<HomePage/>}/>
-                    <Route path="/start" element={<StartPage/>}/>
+                    <Route path="/" element={<StartPage/>}/>
+                    <Route path="/choosePlayer" element={<ChoosePlayerPage/>}/>
                     <Route path="/main" element={<MainPage/>}/>
-                    <Route path="/main/trader" element={<TraderPage/>}/>
-                    <Route path="/main/arena" element={<ArenaPage/>}/>
+                    <Route path="/trader" element={<TraderPage/>}/>
+                    <Route path="/arena" element={<ArenaPage/>}/>
 
                 </Routes>
             </BrowserRouter>

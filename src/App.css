@@ -3,62 +3,68 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px;
-}
-* {
-  font-family: monospace;
+  margin: 10px;
 }
 
-/*a {*/
-/*  text-decoration: none;*/
-/*  color: black;*/
-/*}*/
-.home {
-  width: 1600px;
-  /*background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20200520/pngtree-lightning-creative-texture-hand-painted-water-and-fire-background-image_335938.jpg");*/
-}
 /*========== START =======================*/
-.START- button {
-width: 200px;
-}
-/*========= START PAGE ===============*/
 .start {
-  /*background-image: url("");*/
-  background-color: skyblue;
-  width: 1600px;
-
-}
-.start-toolbar {
-  height: 90px;
-  background-color: #f191b0;
+  width: 1800px;
+  min-height: 1200px;
+  background-image: url("https://assets.vg247.com/current//2016/06/Tekken_7_1.jpg");
   display: flex;
+  background-size:2300px;
+  flex-direction: column;
 }
-.main-toolbar {
-  height: 90px;
-  width: 1600px;
-  background-color: #f5cf54;
-  display: flex;
-  flex-direction: row;
+.h-auto {
+  height: auto;
 }
 .start-button {
   margin: 40px;
+  padding: 20px;
+  color: #591833;
   border-radius: 7px;
-  box-shadow:  0 0 22px 0 rgba(178, 132, 132, 1);
+  box-shadow:  0 0 22px 0 rgb(167, 49, 245);
   background-color: rgba(160, 218, 236, 0.34);
+  font-size: 20px;
 }
 .start-button:hover {
   transform: scale(1.07);
+}
+/*========= CHOOSE PAGE ===============*/
+.choose-field {
+  /*background-image: url("");*/
+  background-color: skyblue;
+  width: 1600px;
+}
+
+.toolbar {
+
+  height: 120px;
+  background-image: url("https://media.istockphoto.com/photos/igniting-competition-matchup-loop-against-fire-ice-embers-picture-id1191905989?b=1&k=20&m=1191905989&s=170667a&w=0&h=XEhE9epTQDwUEgV0SpPh9bi5jZuMzHC156sGVcJGUYo=");
+  display: flex;
+  background-size:1600px;
+  color: #f13fb2;
+  font-size: 20px;
+}
+.st-button {
+  margin: 20px;
+  padding: 10px;
+  color: #591833;
+  border-radius: 7px;
+  box-shadow:  0 0 22px 0 rgb(167, 49, 245);
+  background-color: rgba(160, 218, 236, 0.34);
+  font-size: 20px;
 }
 /*=========CHOOSE CHARACTER ===============*/
 .character {
   width: 220px;
   display: flex;
-  border:  #f191b0 solid 2px;
+  border:  #e73c77 solid 2px;
   border-radius: 10px;
   padding: 10px;
   flex-direction: column;
   background-color: rgba(160, 218, 236, 0.34);
-  box-shadow:  0 0 22px 0 rgba(178, 132, 132, 1);
+  box-shadow:  0 0 22px 0 rgb(250, 145, 71);
 }
 .character h2 {
   margin: 10px;
@@ -103,17 +109,13 @@ width: 200px;
 /*========= USER INVENTORY ===============*/
 .userInventory {
   width: 600px;
-  height: 1200px;
+  min-height: 630px;
   background-color: rgba(100, 149, 237, 0.11);
   box-shadow:  0 0 22px 0 rgba(178, 132, 132, 1);
   padding: 30px;
   margin: 20px;
   border-radius: 10px;
 }
-/*.userInventory h1 {*/
-/*  height: 100px;*/
-/* justify-content: center;*/
-/*}*/
 .inventory {
   width: 150px;
   height: 170px;
@@ -121,12 +123,13 @@ width: 200px;
   background-size: 120px;
 }
 /*========= TRADER ===============*/
-/*========= SHOP ===============*/
+
 .trader {
   width: 800px;
 }
 .user-weapons {
-  width: 800px;
+ min-width: 700px;
+  margin: 40px 0 0 150px;
 }
 .trader-button {
   width: 200px;

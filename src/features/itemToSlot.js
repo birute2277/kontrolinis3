@@ -7,7 +7,7 @@ export const itemToSlotSlice = createSlice({
     },
     reducers: {
         setItemToSlot: (state, {payload}) => {
-            const slotsNumber=payload
+            const slotsNumber = payload
             state.value=[]
             for(let i=0; i<slotsNumber; i++){
                 state.value.push(slotsNumber)

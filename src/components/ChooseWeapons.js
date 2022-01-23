@@ -14,7 +14,6 @@ const ChooseWeapons = ({weapons}) => {
     const chooseWeapons=(x)=>{
         console.log("weapons", x, x.price, x.effects)
          dispatch(setChooseWeapon(x))
-        // nav("/trade")
     }
     return (
         <div className="d-flex wrap space-around">

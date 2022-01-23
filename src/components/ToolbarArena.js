@@ -2,7 +2,7 @@ import React from 'react';
 import {useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 
-const ToolbarTrader = () => {
+const ToolbarArena = () => {
 
     const nav = useNavigate()
 
@@ -10,8 +10,7 @@ const ToolbarTrader = () => {
     return (
 
         <div className="toolbar a-center j-center space-around">
-            <div><h1 onClick={() => nav("/main")}>Main</h1></div>
-            <div><h1 onClick={() => nav("/arena")}>Arena</h1></div>
+            <div><h1 onClick={() => nav("/trader")}>Trader</h1></div>
             <div><h1 onClick={() => nav("/")}>Start</h1></div>
 
 
@@ -21,4 +20,4 @@ const ToolbarTrader = () => {
     );
 };
 
-export default ToolbarTrader;
+export default ToolbarArena;

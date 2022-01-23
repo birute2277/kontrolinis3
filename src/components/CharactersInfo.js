@@ -30,9 +30,6 @@ const CharactersInfo = () => {
     </button>
 </div>
 
-
-
-
     </div>
     );
 };

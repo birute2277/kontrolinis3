@@ -2,41 +2,61 @@
 
 import React from 'react';
 import {useDispatch} from "react-redux";
-import {setCharactersInfo} from "../features/charactersInfo";
-import {setInventorySlots} from "../features/inventorySlots";
+// import {setCharactersInfo} from "../features/charactersInfo";
+// import {setInventorySlots} from "../features/inventorySlots";
 import {useNavigate} from "react-router-dom";
+import {setItemToSlot} from "../features/itemToSlot";
 
-  const Weapons = ({weapons}) => {
-  const dispatch = useDispatch()
 
+const Weapons = ({weapons, slots, itemToSlot, changeMoney, item}) => {
+    const dispatch = useDispatch()
+    let money = 2000
     const nav = useNavigate()
-    const chooseWeapons=(x)=>{
-        console.log("weapons", x, x.price, x.effects)
 
-        // nav("/main")
+    function buyWeapon(arg){
+        console.log(arg)
+        // dispatch(setBuyWeapon(arg))
+        nav("/trade")
+
+        const item = weapons.find(x =>x.image===arg.image)
+        console.log("masyvas slotams AAA",item)
+        if(money-item.price>=0){
+        const arr = slots.map((x, index) => (index === slots.findIndex(x => x === "")) ? item:x)
+        console.log("masyvas slotams", item, arr)
+
+        dispatch(setItemToSlot(arr))
+
+        // dispatch(setItemToSlot(arg))
+
+         }
+
     }
     return (
         <div className="d-flex wrap space-around">
             {weapons.map((x, i) =>
-                <button className="start-button" key={i}>
-                    <div className="weapons"
-                         onClick={ () => chooseWeapons(x)}
+                <div className="start-button" key={i}>
+                    <div
+                        onClick={ () => buyWeapon(x)}
                     >
                         <img src={x.image} alt=""/>
                         <div ><b>MaxDamage:</b> {x.maxDamage}</div>
                         <div><b>EnergyPerHit:</b> {x.energyPerHit}</div>
                         <div><b>Effects:</b> {x. effects}</div>
                         <div><b>Price:{x.price} </b> </div>
-                               </div>
-                </button>
+                       <button>Buy</button>
+                    </div>
+
+                </div>
+
             )}
-            <button className="buy-button" onClick={()=> chooseWeapons()}>Buy</button>
+
         </div>
-);
+    );
 };
 
 export default Weapons;
 
+{/*<button className="buy-button" onClick={()=> chooseWeapon()}>ChooseWeapon</button>*/}
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 {/*<button className="trader-button" onClick={()=> setWeapons(false)}>Potions</button>*/}
 
@@ -44,11 +64,11 @@ export default Weapons;
 
 // import React from 'react';
 // import Characters from "../components/Characters";
-// // import HomePage from "./HomePage";
+// // import StartPage from "./StartPage";
 // // import {useSelector} from "react-redux";
 // // import {useNavigate} from "react-router-dom";
 //
-// const StartPage = () => {
+// const ChoosePlayerPage = () => {
 //
 //
 //     return (
@@ -63,4 +83,4 @@ export default Weapons;
 //     );
 // };
 
-// export default StartPage;
+// export default ChoosePlayerPage;
