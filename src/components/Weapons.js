@@ -3,32 +3,35 @@
 import React from 'react';
 import {useDispatch} from "react-redux";
 // import {setCharactersInfo} from "../features/charactersInfo";
-// import {setInventorySlots} from "../features/inventorySlots";
+import {setInventorySlots} from "../features/inventorySlots";
 import {useNavigate} from "react-router-dom";
-import {setItemToSlot} from "../features/itemToSlot";
+import {setItemToSlot} from "../features/inventorySlots";
+import {useSelector} from "react-redux";
 
-
-const Weapons = ({weapons, slots, itemToSlot, changeMoney, item}) => {
+const Weapons = ({weapons }) => {
     const dispatch = useDispatch()
     let money = 2000
     const nav = useNavigate()
 
+    const slots = useSelector(state => state.inventorySlots.value)
+
     function buyWeapon(arg){
         console.log(arg)
         // dispatch(setBuyWeapon(arg))
-        nav("/trade")
+        //("/trade")
 
         const item = weapons.find(x =>x.image===arg.image)
-        console.log("masyvas slotams AAA",item)
-        if(money-item.price>=0){
+        console.log("masyvas slotams AAA",item, slots)
+        //if(money-item.price>=0){
         const arr = slots.map((x, index) => (index === slots.findIndex(x => x === "")) ? item:x)
+
         console.log("masyvas slotams", item, arr)
 
         dispatch(setItemToSlot(arr))
 
         // dispatch(setItemToSlot(arg))
 
-         }
+         //}
 
     }
     return (

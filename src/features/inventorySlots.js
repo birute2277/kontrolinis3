@@ -14,7 +14,7 @@ export const inventorySlotsSlice = createSlice({
             }
         },
         setItemToSlot: (state, action) => {
-            state.value = [...state.value, action.payload]
+            state.value = action.payload
         },
 
     }

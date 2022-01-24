@@ -6,7 +6,7 @@ import {setItemToSlot} from "../features/itemToSlot";
 const UserInventory = (item) => {
     const nav = useNavigate()
     const slots = useSelector(state=>state.inventorySlots.value)
-    console.log(slots)
+    console.log( "slotai", slots)
     return (
 
             <div className="userInventory d-flex column ">
